@@ -127,9 +127,7 @@ class App extends Component {
     if (!this.validatePhone(phone)) {
       return <span className="error">A valid phone is required</span>;
     }
-    if (!this.validateSocial(ssn)) {
-      return <span className="error">A valid social security number is required</span>;
-    }
+    
 
     return (<div>
       <button id="submit" onClick={this.submit}>Submit</button>
@@ -182,8 +180,7 @@ class App extends Component {
             <input type="text" onChange={this.onAgeChange} id="age" />
             <label htmlFor="phone">Phone</label>
             <input type="text" onChange={this.onPhoneChange} id="phone" />
-            <label htmlFor="ssn">Social Security Number</label>
-            <input type="text" onChange={this.onSocialChange} id="ssn" />
+           
             {this.formValidation()}
           </fieldset>
         </form>
